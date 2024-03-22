@@ -1,9 +1,30 @@
 <html>
+  <head>
+    <style>
+      .demsond-player {
+        border-color: black;
+        width: 1px;
+        display: block;
+      }
+      .desmond-player.player.top {
+        height: 45vh;
+        left: calc(100vw / 3);
+        position: relative;
+      }
+      
+      .desmond-player.player.bottom {
+        height: 45vh;
+        position: relative;
+        left: calc(100vw / 3);
+        top: 3vh;
+      }
+    </style>
+  </head>
   <body>
     <input type="file" style="position: relative; transform: translate(-50%, -50%); left: 30%; top: 90%;">
     <p style="position: absolute; top: 98.35%; left: 49%;"> Enable Microphone </p>
     <input type="checkbox" id="microphone_on" style="position: relative; transform: translate(-50%, -50%); left: 30%; top: 95%;">
-    <desmond-player id="player" style="position: relative; transform: translate(-50%, -50%); left: 35%; top: 100%; border-color: black;"></desmond-player>
+    <desmond-player id="player" style="display:block;width:1px;"></desmond-player>
     <script src="https://cdn.jsdelivr.net/gh/Unzor/desmond/cdn/desmond.min.js"></script>
     <script>
     document.getElementById("player").loadURL("path-to-game.nds");
